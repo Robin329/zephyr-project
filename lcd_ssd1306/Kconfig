@@ -1,0 +1,19 @@
+# Copyright (c) 2019 Nordic Semiconductor ASA
+# SPDX-License-Identifier: Apache-2.0
+
+# Use the SPI driver by default, unless the GPIO driver is
+# specifically configured in.
+config I2C
+	default y
+
+menu "I2C ssd1306 Configuration"
+
+config SAMPLE_SSD1306_UPDATE_DELAY
+	int "Delay between LCD updates in ms"
+	default 50
+	help
+	  Delay between LCD updates in ms.
+
+endmenu
+
+source "Kconfig.zephyr"
